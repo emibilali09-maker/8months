@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>8 Months · Die For You</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#120306;--bg2:#2a0610;--red:#a30f2b;--gold:#d9a93f;--gold2:#f3d98a;--ink:#f6e9d2;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 0%,var(--bg2),var(--bg) 70%) fixed;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;overflow-x:hidden}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+#petals svg{position:absolute;top:-80px;animation:fall linear infinite;opacity:.55}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
+main{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:2rem 1.2rem 4rem}
+.gold{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+header{text-align:center;padding-top:1.5rem}
+.eyebrow{letter-spacing:.4em;text-transform:uppercase;font-size:.85rem;color:var(--gold)}
+h1{font-family:'Cinzel Decorative',Georgia,serif;font-size:clamp(2.6rem,9vw,5.5rem);margin:.3rem 0;line-height:1.05}
+.sub{font-style:italic;max-width:34ch;margin:0 auto;opacity:.9}
+.klimt{width:min(420px,88vw);margin:1.5rem auto 0;display:block;filter:drop-shadow(0 0 30px rgba(217,169,63,.35))}
+h2{font-family:'Cinzel Decorative',Georgia,serif;text-align:center;font-size:clamp(1.4rem,4vw,2.2rem);margin:3.5rem 0 .5rem}
+.divider{display:flex;justify-content:center;gap:.8rem;margin-bottom:1.5rem}
+.divider svg{width:26px;height:26px}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(4,1fr);grid-template-areas:"a v v b" "c v v d" "e e f f";align-items:center}
+.slot{display:flex;justify-content:center}
+.s-a{grid-area:a}.s-b{grid-area:b}.s-c{grid-area:c}.s-d{grid-area:d}.s-e{grid-area:e}.s-f{grid-area:f}
+.shape{position:relative;width:min(100%,230px);aspect-ratio:1;cursor:pointer;display:block;filter:drop-shadow(0 0 12px rgba(217,169,63,.45))}
+.shape .in{position:absolute;inset:0;background:linear-gradient(135deg,#5a0a1a,#2a0610);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;font-size:.95rem;color:var(--gold2);text-align:center;transition:transform .3s}
+.shape:hover .in{transform:scale(1.06)}
+.shape .in img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shape input{display:none}
+.heart .in{clip-path:url(#heart)}.rose .in{clip-path:url(#roseshape)}
+.shape .plus{font-size:2rem;line-height:1}
+.video{grid-area:v;border:3px solid var(--gold);border-radius:6px;padding:8px;background:linear-gradient(135deg,#3a0813,#120306);box-shadow:0 0 0 1px #000,0 0 40px rgba(163,15,43,.7)}
+.vbox{position:relative;aspect-ratio:16/10;background:#000 repeating-linear-gradient(45deg,#1a0408 0 10px,#240610 10px 20px);display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer}
+.vbox video{position:absolute;inset:0;width:100%;height:100%;background:#000}
+.vbox input{display:none}
+.vbox .ph{padding:1rem;color:var(--gold2)}
+.vbox .play{width:64px;height:64px;margin:0 auto .5rem;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:1.6rem}
+.note{text-align:center;font-style:italic;margin-top:2.5rem;max-width:40ch;margin-inline:auto;font-size:1.4rem}
+footer{text-align:center;margin-top:3rem;color:var(--gold);letter-spacing:.2em;font-size:.9rem}
+@media(max-width:700px){
+.gallery{grid-template-columns:repeat(2,1fr);grid-template-areas:"v v" "a b" "c d" "e f"}
+}
+@media(prefers-reduced-motion:reduce){#petals svg{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<clipPath id="heart" clipPathUnits="objectBoundingBox"><path d="M0.5,0.96 C0.08,0.66 0,0.42 0,0.28 C0,0.1 0.14,0 0.28,0 C0.38,0 0.46,0.06 0.5,0.14 C0.54,0.06 0.62,0 0.72,0 C0.86,0 1,0.1 1,0.28 C1,0.42 0.92,0.66 0.5,0.96Z"/></clipPath>
+<clipPath id="roseshape" clipPathUnits="objectBoundingBox"><circle cx=".5" cy=".5" r=".3"/><circle cx=".5" cy=".24" r=".24"/><circle cx=".75" cy=".42" r=".24"/><circle cx=".66" cy=".72" r=".24"/><circle cx=".34" cy=".72" r=".24"/><circle cx=".25" cy=".42" r=".24"/></clipPath>
+<symbol id="rose" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="46" fill="#7a0a1f"/>
+<circle cx="50" cy="50" r="38" fill="#a30f2b" stroke="#4a0512" stroke-width="2"/>
+<path d="M50 50 m-26 0 a26 26 0 1 1 26 26" fill="none" stroke="#d8284a" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 50 m-16 0 a16 16 0 1 1 16 16" fill="none" stroke="#e84b68" stroke-width="4" stroke-linecap="round"/>
+<path d="M50 50 m-8 0 a8 8 0 1 1 8 8" fill="none" stroke="#f58aa0" stroke-width="4" stroke-linecap="round"/>
+</symbol>
+<symbol id="mini" viewBox="0 0 100 100"><use href="#rose"/></symbol>
+</defs>
+</svg>
+
+<div id="petals"></div>
+
+<main>
+<header>
+  <div class="eyebrow">Eight months of us</div>
+  <h1 class="gold">Die For You</h1>
+  <p class="sub">Everything tried to pull us apart. Nothing ever could.</p>
+
+  <!-- Klimt-inspired "The Kiss" -->
+  <svg class="klimt" viewBox="0 0 400 480" role="img" aria-label="Artwork inspired by Klimt’s The Kiss">
+    <defs>
+      <radialGradient id="aura" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#f3d98a"/><stop offset="1" stop-color="#8a5a12"/></radialGradient>
+      <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="2.2" fill="#6a430a" opacity=".6"/></pattern>
+      <pattern id="blocks" width="26" height="30" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="9" height="22" fill="#111"/><rect x="14" y="4" width="9" height="9" fill="#f6e9d2"/><rect x="14" y="16" width="9" height="9" fill="#111"/></pattern>
+      <pattern id="spir" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="17" cy="17" r="11" fill="none" stroke="#a30f2b" stroke-width="3"/><circle cx="17" cy="17" r="5" fill="#d9a93f"/><circle cx="4" cy="4" r="3" fill="#2f7a4a"/><circle cx="30" cy="30" r="3" fill="#5b8fd1"/></pattern>
+      <clipPath id="orb"><circle cx="200" cy="230" r="195"/></clipPath>
+    </defs>
+    <circle cx="200" cy="230" r="195" fill="url(#aura)"/>
+    <circle cx="200" cy="230" r="195" fill="url(#dots)"/>
+    <g clip-path="url(#orb)">
+      <!-- flower meadow -->
+      <path d="M0 400 Q100 360 200 390 T400 380 V480 H0Z" fill="#2c5a3a"/>
+      <g id="fl"></g>
+      <!-- figures: shared golden robe -->
+      <path d="M130 140 C140 90 260 90 270 140 L300 470 H100Z" fill="#e6b84a"/>
+      <path d="M130 140 C140 90 200 100 200 150 L215 470 H100Z" fill="url(#blocks)"/>
+      <path d="M200 150 C200 100 260 90 270 140 L300 470 H215Z" fill="url(#spir)"/>
+      <path d="M130 140 C140 90 260 90 270 140" fill="none" stroke="#8a5a12" stroke-width="3"/>
+      <!-- heads -->
+      <ellipse cx="185" cy="100" rx="34" ry="40" fill="#3a2418" transform="rotate(-10 185 100)"/>
+      <ellipse cx="222" cy="108" rx="30" ry="36" fill="#f2cfae" transform="rotate(12 222 108)"/>
+      <path d="M195 88 C200 50 260 55 258 105 C248 80 225 78 205 96Z" fill="#6a3a1d"/>
+      <path d="M215 60 q8 -14 20 -4 q10 -12 22 0 q12 4 8 18 q-14 -10 -26 -2 q-12 -8 -24 -12Z" fill="#a30f2b"/>
+      <circle cx="226" cy="58" r="6" fill="#f3d98a"/><circle cx="244" cy="58" r="5" fill="#f58aa0"/>
+      <ellipse cx="214" cy="112" rx="9" ry="3" fill="none" stroke="#6a3a1d" stroke-width="2"/>
+    </g>
+    <circle cx="200" cy="230" r="195" fill="none" stroke="#f3d98a" stroke-width="4"/>
+  </svg>
+</header>
+
+<h2 class="gold">Maybe forever? Always together.</h2>
+<div class="divider">
+  <svg><use href="#rose"/></svg><svg><use href="#rose"/></svg><svg><use href="#rose"/></svg>
+</div>
+<p style="text-align:center;opacity:.8;margin-top:-.5rem;font-size:1.05rem">Tap the video box and each heart or rose to add your own memories.</p>
+
+<section class="gallery">
+ <div class="vbox" id="vbox"><video src="video.mp4" controls playsinline></video><input type="file" id="vfile" accept="video/*"></div>
+<div class="slot s-a"><label class="shape heart"><div class="in"><img src="d1.jpg" alt="Us"></div></label></div>
+<div class="slot s-b"><label class="shape rose"><div class="in"><img src="d2.jpg" alt="Us"></div></label></div>
+<div class="slot s-c"><label class="shape rose"><div class="in"><img src="d3.jpg" alt="Us"></div></label></div>
+<div class="slot s-d"><label class="shape heart"><div class="in"><img src="d4.jpg" alt="Us"></div></label></div>
+<div class="slot s-e"><label class="shape heart"><div class="in"><img src="d5.jpg" alt="Us"></div></label></div>
+<div class="slot s-f"><label class="shape rose"><div class="in"><img src="d6.jpg" alt="Us"></div></label></div>
+</section>
+
+<p class="note">Through every storm and every wall they built between us, we found each other again. Eight months down, and I’d choose you in every one of them.</p>
+
+<footer>HAPPY 8 MONTHS ♥ YOURS, ALWAYS</footer>
+</main>
+
+<script>
+// falling rose petals/roses
+(function(){
+  var box=document.getElementById('petals'),ns='http://www.w3.org/2000/svg';
+  for(var i=0;i<16;i++){
+    var s=document.createElementNS(ns,'svg'),u=document.createElementNS(ns,'use');
+    var size=18+Math.random()*34;
+    s.setAttribute('width',size);s.setAttribute('height',size);s.setAttribute('viewBox','0 0 100 100');
+    u.setAttribute('href','#rose');s.appendChild(u);
+    s.style.left=Math.random()*100+'%';
+    s.style.animationDuration=(12+Math.random()*16)+'s';
+    s.style.animationDelay=(-Math.random()*20)+'s';
+    box.appendChild(s);
+  }
+  // meadow flowers in the Klimt piece
+  var g=document.getElementById('fl'),cols=['#a30f2b','#f3d98a','#5b8fd1','#f6e9d2','#d8284a'];
+  for(var j=0;j<26;j++){
+    var c=document.createElementNS(ns,'circle');
+    c.setAttribute('cx',10+Math.random()*380);c.setAttribute('cy',395+Math.random()*70);
+    c.setAttribute('r',4+Math.random()*6);c.setAttribute('fill',cols[j%cols.length]);g.appendChild(c);
+  }
+})();
+// photo slots
+document.querySelectorAll('.shape input').forEach(function(inp){
+  inp.addEventListener('change',function(){
+    var f=inp.files[0];if(!f)return;
+    var in_=inp.parentNode.querySelector('.in');in_.innerHTML='';
+    var img=new Image();img.src=URL.createObjectURL(f);img.alt='Our memory';in_.appendChild(img);
+  });
+});
+// video
+document.getElementById('vfile').addEventListener('change',function(e){
+  var f=e.target.files[0];if(!f)return;
+  var box=document.getElementById('vbox');
+  var v=document.createElement('video');v.src=URL.createObjectURL(f);v.controls=true;v.playsInline=true;
+  box.innerHTML='';box.style.cursor='default';box.appendChild(v);
+});
+</script>
+</body>
+</html>
